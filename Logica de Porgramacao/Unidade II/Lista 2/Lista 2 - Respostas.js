@@ -1,40 +1,82 @@
-function questao1 (nota1, nota2, nota3, nota4){
+function questao1 (){
+    var nota1 = window.prompt("Digite a primeira nota:");
+    nota1 = parseFloat(nota1);
+    var nota2 = window.prompt("Digite a segunda nota:");
+    nota2 = parseFloat(nota2);
+    var nota3 = window.prompt("Digite a terceira nota:");
+    nota3 = parseFloat(nota3);
+    var nota4 = window.prompt("Digite a quarta nota:");
+    nota4 = parseFloat(nota4);
+
+    var msg = "";
     var media = (nota1+nota2+nota3+nota4)/4
     var situacao = media<7?"Reprovado":"Aprovado"
-    console.log("Média: "+media+" . A situação é: "+situacao)
-    
+    msg = "Média: "+media+" . A situação é: "+situacao
+    window.alert(msg);
 } 
 
-function questao2 (num){
+function questao2 (){
+    var num = window.prompt("Digite o número:");
+    num = parseFloat(num);
+    
+    var msg = "";
+
     var mult = num%3
     if(mult==0){
-        console.log("O número: "+num+" é múltiplo de 3.");
+        msg = "O número: "+num+" é múltiplo de 3."
     } else {
-        console.log("O número: "+num+" não é múltiplo de 3.");
+        msg = "O número: "+num+" não é múltiplo de 3."
     }    
+    console.log(msg);
+    window.alert(msg);
 } 
 
-function questao3 (num1, num2) {
+function questao3 () {
+    var num1 = window.prompt("Digite o primeiro número:");
+    num1 = parseFloat(num1);
+    var num2 = window.prompt("Digite o segundo número:");
+    num2 = parseFloat(num2);
+
+    var msg = "";
+
     if (num1<=num2) {
-        console.log("O menor número é "+num1);
+        msg = "O menor número é "+num1
     } else if (num2 <= num1){
-        console.log("O menor número "+num2);
+        msg = "O menor número "+num2
     } 
+    console.log(msg);
+    window.alert(msg);
 }
 
-function questao4 (num1, num2, num3) {
+function questao4 () {
+    var num1 = window.prompt("Digite o primeiro número:");
+    num1 = parseFloat(num1);
+    var num2 = window.prompt("Digite o segundo número:");
+    num2 = parseFloat(num2);
+    var num3 = window.prompt("Digite o terceiro número:");
+    num3 = parseFloat(num3);
+
+    var msg = "";
+
     if (num1>=num2 && num1>=num3) {
-        console.log("O maior número é "+num1);
+        msg = "O maior número é "+num1
     } else if (num2>=num1 && num2 >= num3) {
-        console.log("O maior número é "+num2);
+        msg = "O maior número é "+num2
     } else if (num3>=num1 && num3 >= num2) {
-        console.log("O maior número é "+num3);
+        msg = "O maior número é "+num3
     } else  {
-        console.log("Os número são iguais cujo valor é "+num1);
-    }
+        msg = "Os número são iguais cujo valor é "+num1
+    }    
+    console.log(msg);
+    window.alert(msg);
 }
 
-function questao5 (num1, num2, op){
+function questao5 (){
+    var num1 = window.prompt("Digite o primeiro número:");
+    num1 = parseFloat(num1);
+    var num2 = window.prompt("Digite o segundo número:");
+    num2 = parseFloat(num2);
+
     var op = window.prompt("Digite a operação deseja de 1 a 4.\n1-Média\n2-Diferença\n3-Produto\n4-Divisão");
     var desc = "";
     if(op == 1 || op == "1"){
@@ -54,10 +96,18 @@ function questao5 (num1, num2, op){
     window.alert(desc);
 }
 
-function questao6 (num){
+function questao6 (){
+    var num = window.prompt("Digite um número: ");
+    num = parseFloat(num);
+    var msg = "";
+
     for (var i = 1; i<= 10; i++){
-        console.log(num+" x "+i+" = "+ (num*i))
+        msg += num+" x "+i+" = "+ (num*i);
+        msg += "\n"
     }
+
+    console.log(msg);
+    window.alert(msg);
 }
 
 function questao7 (){
