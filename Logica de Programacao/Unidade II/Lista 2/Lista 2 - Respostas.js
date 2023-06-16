@@ -1,22 +1,25 @@
+const prompt = require('prompt-sync')()
+
 function questao1 (){
-    var nota1 = window.prompt("Digite a primeira nota:");
+    var nota1 = prompt("Digite a primeira nota:");
     nota1 = parseFloat(nota1);
-    var nota2 = window.prompt("Digite a segunda nota:");
+    var nota2 = prompt("Digite a segunda nota:");
     nota2 = parseFloat(nota2);
-    var nota3 = window.prompt("Digite a terceira nota:");
+    var nota3 = prompt("Digite a terceira nota:");
     nota3 = parseFloat(nota3);
-    var nota4 = window.prompt("Digite a quarta nota:");
+    var nota4 = prompt("Digite a quarta nota:");
     nota4 = parseFloat(nota4);
 
     var msg = "";
     var media = (nota1+nota2+nota3+nota4)/4
     var situacao = media<7?"Reprovado":"Aprovado"
     msg = "Média: "+media+" . A situação é: "+situacao
-    window.alert(msg);
+    console.log(msg);
+    //window.alert(msg);
 } 
 
 function questao2 (){
-    var num = window.prompt("Digite o número:");
+    var num = prompt("Digite o número:");
     num = parseFloat(num);
     
     var msg = "";
@@ -28,13 +31,13 @@ function questao2 (){
         msg = "O número: "+num+" não é múltiplo de 3."
     }    
     console.log(msg);
-    window.alert(msg);
+    //window.alert(msg);
 } 
 
 function questao3 () {
-    var num1 = window.prompt("Digite o primeiro número:");
+    var num1 = prompt("Digite o primeiro número:");
     num1 = parseFloat(num1);
-    var num2 = window.prompt("Digite o segundo número:");
+    var num2 = prompt("Digite o segundo número:");
     num2 = parseFloat(num2);
 
     var msg = "";
@@ -45,15 +48,15 @@ function questao3 () {
         msg = "O menor número "+num2
     } 
     console.log(msg);
-    window.alert(msg);
+    //window.alert(msg);
 }
 
 function questao4 () {
-    var num1 = window.prompt("Digite o primeiro número:");
+    var num1 = prompt("Digite o primeiro número:");
     num1 = parseFloat(num1);
-    var num2 = window.prompt("Digite o segundo número:");
+    var num2 = prompt("Digite o segundo número:");
     num2 = parseFloat(num2);
-    var num3 = window.prompt("Digite o terceiro número:");
+    var num3 = prompt("Digite o terceiro número:");
     num3 = parseFloat(num3);
 
     var msg = "";
@@ -68,16 +71,16 @@ function questao4 () {
         msg = "Os número são iguais cujo valor é "+num1
     }    
     console.log(msg);
-    window.alert(msg);
+    //window.alert(msg);
 }
 
 function questao5 (){
-    var num1 = window.prompt("Digite o primeiro número:");
+    var num1 = prompt("Digite o primeiro número:");
     num1 = parseFloat(num1);
-    var num2 = window.prompt("Digite o segundo número:");
+    var num2 = prompt("Digite o segundo número:");
     num2 = parseFloat(num2);
 
-    var op = window.prompt("Digite a operação deseja de 1 a 4.\n1-Média\n2-Diferença\n3-Produto\n4-Divisão");
+    var op = prompt("Digite a operação deseja de 1 a 4.\n1-Média\n2-Diferença\n3-Produto\n4-Divisão");
     var desc = "";
     if(op == 1 || op == "1"){
         var media = (num1 + num2) / 2;
@@ -93,11 +96,11 @@ function questao5 (){
         desc = "Divisão = "+num1/num2;
     }
     console.log(desc);
-    window.alert(desc);
+    //window.alert(desc);
 }
 
 function questao6 (){
-    var num = window.prompt("Digite um número: ");
+    var num = prompt("Digite um número: ");
     num = parseFloat(num);
     var msg = "";
 
@@ -107,14 +110,15 @@ function questao6 (){
     }
 
     console.log(msg);
-    window.alert(msg);
+    //window.alert(msg);
 }
 
 function questao7 (){
     var i =0;
     do {
-        var op = window.prompt("Digite um número: ");
-        window.alert("O quadrado de: "+op+" é igual a: "+parseFloat(op)*parseFloat(op));
+        var op = prompt("Digite um número: ");
+        console.log("O quadrado de: "+op+" é igual a: "+parseFloat(op)*parseFloat(op));
+        //window.alert("O quadrado de: "+op+" é igual a: "+parseFloat(op)*parseFloat(op));
         i++;
     } while(i<5)    
 }
@@ -123,12 +127,12 @@ function questao8 (){
     var i =0 
     var contIdadeSup50=0, contIdade10a20=0, contPesoAbaixo40=0;
     var somaAltura10a20=0;
-    var qtde = window.prompt("Digite quantas pessoas serão analisadas: ");
+    var qtde = prompt("Digite quantas pessoas serão analisadas: ");
 
     do {
-        var idade = window.prompt((i+1)+" - Digite a idade: ");
-        var altura = window.prompt((i+1)+" - Digite a altura: ");
-        var peso = window.prompt((i+1)+" - Digite o peso: ");
+        var idade = prompt((i+1)+" - Digite a idade: ");
+        var altura = prompt((i+1)+" - Digite a altura: ");
+        var peso = prompt((i+1)+" - Digite o peso: ");
         
         if (parseInt(idade)>50) {
             contIdadeSup50++;
@@ -146,8 +150,8 @@ function questao8 (){
     var msg = "Quantidade de pessoas superior a 50 anos: "+contIdadeSup50;
     msg += "\nMédia de altura das pessoas entre 10 e 20 anos: "+(somaAltura10a20/contIdade10a20).toFixed(2);
     msg += "\nPercentual de pessoas com peso abaixo de 40 quilos: "+((contPesoAbaixo40/qtde) * 100).toFixed(2)+"%"
-
-    window.alert(msg);
+    console.log(msg);
+    //window.alert(msg);
 }
 
 function questao9 (){
@@ -155,7 +159,7 @@ function questao9 (){
     var somaPar = 0, somaImpar = 0; 
 
     do {
-        var num = window.prompt((i+1)+" - Digite o número: ");        
+        var num = prompt((i+1)+" - Digite o número: ");        
         
         if (parseFloat(num)%2==0) {
             somaPar += parseFloat(num);
@@ -168,8 +172,8 @@ function questao9 (){
     
     var msg = "Soma pares: "+somaPar;
     msg += "\nSoma impares: "+somaImpar;  
-
-    window.alert(msg);
+    console.log(msg);
+    //window.alert(msg);
 }
 
 function questao10 (){
@@ -177,9 +181,9 @@ function questao10 (){
     var contIdadeSup50=0, somaAlturaSup50=0;
     
     do {
-        var idade = window.prompt((i+1)+" - Digite a idade (Digite algum número menor ou igual a 0 para encerrar): ");
+        var idade = prompt((i+1)+" - Digite a idade (Digite algum número menor ou igual a 0 para encerrar): ");
         if(parseInt(idade)>0) {            
-            var altura = window.prompt((i+1)+" - Digite a altura: ");        
+            var altura = prompt((i+1)+" - Digite a altura: ");        
         }
         
         if (parseInt(idade)>50) {
@@ -190,5 +194,23 @@ function questao10 (){
     } while(parseInt(idade)>0)    
     
     var msg = "Média de altura das pessoas com idade superior a 50 anos: "+(somaAlturaSup50/contIdadeSup50).toFixed(2);
-    window.alert(msg);
+    console.log(msg);
+    //window.alert(msg);
 }
+
+function questaoNode (){   
+    var nota1 = prompt("Digite a primeira nota:");
+    nota1 = parseFloat(nota1);
+    var nota2 = prompt("Digite a segunda nota:");
+    nota2 = parseFloat(nota2);
+    var nota3 = prompt("Digite a terceira nota:");
+    nota3 = parseFloat(nota3);
+    var nota4 = prompt("Digite a quarta nota:");
+    nota4 = parseFloat(nota4);
+
+    var msg = "";
+    var media = (nota1+nota2+nota3+nota4)/4
+    var situacao = media<7?"Reprovado":"Aprovado"
+    msg = "Média: "+media+" . A situação é: "+situacao
+    console.log(msg);
+} 
