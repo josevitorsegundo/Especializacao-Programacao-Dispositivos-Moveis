@@ -1,3 +1,4 @@
+//https://www.npmjs.com/package/prompt-sync
 const prompt = require('prompt-sync')()
 
 function questao1 (){
