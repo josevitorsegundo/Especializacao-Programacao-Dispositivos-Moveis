@@ -2,30 +2,24 @@
 const prompt = require('prompt-sync')()
 
 function questao1 (){
-    var nota1 = prompt("Digite a primeira nota:");
-    nota1 = parseFloat(nota1);
-    var nota2 = prompt("Digite a segunda nota:");
-    nota2 = parseFloat(nota2);
-    var nota3 = prompt("Digite a terceira nota:");
-    nota3 = parseFloat(nota3);
-    var nota4 = prompt("Digite a quarta nota:");
-    nota4 = parseFloat(nota4);
+    const nota1 = Number(prompt("Digite a primeira nota:"));
+    const nota2 = Number(prompt("Digite a segunda nota:"));
+    const nota3 = Number(prompt("Digite a terceira nota:"));
+    const nota4 = Number(prompt("Digite a quarta nota:"));
 
-    var msg = "";
-    var media = (nota1+nota2+nota3+nota4)/4
-    var situacao = media<7?"Reprovado":"Aprovado"
+    let msg = "";
+    let media = (nota1+nota2+nota3+nota4)/4
+    const situacao = media<7?"Reprovado":"Aprovado"
     msg = "Média: "+media+" . A situação é: "+situacao
     console.log(msg);
     //window.alert(msg);
 } 
 
 function questao2 (){
-    var num = prompt("Digite o número:");
-    num = parseFloat(num);
-    
-    var msg = "";
+    const num = Number(prompt("Digite o número:"));
+    let msg = "";
 
-    var mult = num%3
+    const mult = num%3
     if(mult==0){
         msg = "O número: "+num+" é múltiplo de 3."
     } else {
@@ -36,12 +30,10 @@ function questao2 (){
 } 
 
 function questao3 () {
-    var num1 = prompt("Digite o primeiro número:");
-    num1 = parseFloat(num1);
-    var num2 = prompt("Digite o segundo número:");
-    num2 = parseFloat(num2);
+    const num1 = Number(prompt("Digite o primeiro número:"));
+    const num2 = Number(prompt("Digite o segundo número:"));
 
-    var msg = "";
+    let msg = "";
 
     if (num1<=num2) {
         msg = "O menor número é "+num1
@@ -53,14 +45,11 @@ function questao3 () {
 }
 
 function questao4 () {
-    var num1 = prompt("Digite o primeiro número:");
-    num1 = parseFloat(num1);
-    var num2 = prompt("Digite o segundo número:");
-    num2 = parseFloat(num2);
-    var num3 = prompt("Digite o terceiro número:");
-    num3 = parseFloat(num3);
+    const num1 = Number(prompt("Digite o primeiro número:"));
+    const num2 = Number(prompt("Digite o segundo número:"));
+    const num3 = Number(prompt("Digite o terceiro número:"));
 
-    var msg = "";
+    let msg = "";
 
     if (num1>=num2 && num1>=num3) {
         msg = "O maior número é "+num1
@@ -76,13 +65,11 @@ function questao4 () {
 }
 
 function questao5 (){
-    var num1 = prompt("Digite o primeiro número:");
-    num1 = parseFloat(num1);
-    var num2 = prompt("Digite o segundo número:");
-    num2 = parseFloat(num2);
+    const num1 = Number(prompt("Digite o primeiro número:"));
+    const num2 = Number(prompt("Digite o segundo número:"));
 
-    var op = prompt("Digite a operação deseja de 1 a 4.\n1-Média\n2-Diferença\n3-Produto\n4-Divisão");
-    var desc = "";
+    let op = prompt("Digite a operação deseja de 1 a 4.\n1-Média\n2-Diferença\n3-Produto\n4-Divisão\n--> ");
+    let desc = "";
     if(op == 1 || op == "1"){
         var media = (num1 + num2) / 2;
         desc = "Média = "+media;        
@@ -101,9 +88,8 @@ function questao5 (){
 }
 
 function questao6 (){
-    var num = prompt("Digite um número: ");
-    num = parseFloat(num);
-    var msg = "";
+    const num = Number(prompt("Digite um número: "));
+    let msg = "";
 
     for (var i = 1; i<= 10; i++){
         msg += num+" x "+i+" = "+ (num*i);
@@ -115,25 +101,25 @@ function questao6 (){
 }
 
 function questao7 (){
-    var i =0;
+    let i =0;
     do {
-        var op = prompt("Digite um número: ");
-        console.log("O quadrado de: "+op+" é igual a: "+parseFloat(op)*parseFloat(op));
-        //window.alert("O quadrado de: "+op+" é igual a: "+parseFloat(op)*parseFloat(op));
+        const op = Number(prompt("Digite um número: "));
+        console.log("O quadrado de: "+op+" é igual a: "+op*op);
+        //window.alert("O quadrado de: "+op+" é igual a: "+op*op);
         i++;
     } while(i<5)    
 }
 
 function questao8 (){
-    var i =0 
-    var contIdadeSup50=0, contIdade10a20=0, contPesoAbaixo40=0;
-    var somaAltura10a20=0;
-    var qtde = prompt("Digite quantas pessoas serão analisadas: ");
+    let i =0 
+    let contIdadeSup50=0, contIdade10a20=0, contPesoAbaixo40=0;
+    let somaAltura10a20=0;
+    const qtde = Number(prompt("Digite quantas pessoas serão analisadas: "));
 
     do {
-        var idade = prompt((i+1)+" - Digite a idade: ");
-        var altura = prompt((i+1)+" - Digite a altura: ");
-        var peso = prompt((i+1)+" - Digite o peso: ");
+        var idade = Number(prompt((i+1)+" - Digite a idade: "));
+        var altura = Number(prompt((i+1)+" - Digite a altura: "));
+        var peso = Number(prompt((i+1)+" - Digite o peso: "));
         
         if (parseInt(idade)>50) {
             contIdadeSup50++;
@@ -148,7 +134,7 @@ function questao8 (){
         i++;
     } while(i<qtde)    
     
-    var msg = "Quantidade de pessoas superior a 50 anos: "+contIdadeSup50;
+    let msg = "Quantidade de pessoas superior a 50 anos: "+contIdadeSup50;
     msg += "\nMédia de altura das pessoas entre 10 e 20 anos: "+(somaAltura10a20/contIdade10a20).toFixed(2);
     msg += "\nPercentual de pessoas com peso abaixo de 40 quilos: "+((contPesoAbaixo40/qtde) * 100).toFixed(2)+"%"
     console.log(msg);
@@ -156,11 +142,12 @@ function questao8 (){
 }
 
 function questao9 (){
-    var i =0 
-    var somaPar = 0, somaImpar = 0; 
+    let i = 0 
+    let somaPar = 0, somaImpar = 0; 
+    let num
 
     do {
-        var num = prompt((i+1)+" - Digite o número: ");        
+        num = Number(prompt((i+1)+" - Digite o número: "));        
         
         if (parseFloat(num)%2==0) {
             somaPar += parseFloat(num);
@@ -171,47 +158,31 @@ function questao9 (){
         i++;
     } while(i<10)    
     
-    var msg = "Soma pares: "+somaPar;
+    let msg = "Soma pares: "+somaPar;
     msg += "\nSoma impares: "+somaImpar;  
     console.log(msg);
     //window.alert(msg);
 }
 
 function questao10 (){
-    var i= 0;
-    var contIdadeSup50=0, somaAlturaSup50=0;
-    
+    let i= 0;
+    let contIdadeSup50=0, somaAlturaSup50=0;
+    let idade, altura
+
     do {
-        var idade = prompt((i+1)+" - Digite a idade (Digite algum número menor ou igual a 0 para encerrar): ");
+        idade = Number(prompt((i+1)+" - Digite a idade (Digite algum número menor ou igual a 0 para encerrar): "));
         if(parseInt(idade)>0) {            
-            var altura = prompt((i+1)+" - Digite a altura: ");        
+            altura = Number(prompt((i+1)+" - Digite a altura: "));        
         }
         
         if (parseInt(idade)>50) {
             contIdadeSup50++;
-            somaAlturaSup50 += parseFloat(altura);
+            somaAlturaSup50 += altura;
         }
         i++;      
     } while(parseInt(idade)>0)    
     
-    var msg = "Média de altura das pessoas com idade superior a 50 anos: "+(somaAlturaSup50/contIdadeSup50).toFixed(2);
+    let msg = "Média de altura das pessoas com idade superior a 50 anos: "+(somaAlturaSup50/contIdadeSup50).toFixed(2);
     console.log(msg);
     //window.alert(msg);
 }
-
-function questaoNode (){   
-    var nota1 = prompt("Digite a primeira nota:");
-    nota1 = parseFloat(nota1);
-    var nota2 = prompt("Digite a segunda nota:");
-    nota2 = parseFloat(nota2);
-    var nota3 = prompt("Digite a terceira nota:");
-    nota3 = parseFloat(nota3);
-    var nota4 = prompt("Digite a quarta nota:");
-    nota4 = parseFloat(nota4);
-
-    var msg = "";
-    var media = (nota1+nota2+nota3+nota4)/4
-    var situacao = media<7?"Reprovado":"Aprovado"
-    msg = "Média: "+media+" . A situação é: "+situacao
-    console.log(msg);
-} 
