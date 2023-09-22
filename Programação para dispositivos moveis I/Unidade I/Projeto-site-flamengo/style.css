@@ -33,9 +33,18 @@ main img {
 footer {
     background-color: black;
     color: white;
-    padding: 10px;
+    padding: 1px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.ano-titulo {
+    margin: 5px;
+    /*text-align: center;*/
+}
+
+.flex {
+    display: flex;
 }
