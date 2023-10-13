@@ -1,0 +1,43 @@
+main {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+img#imagem-torta-liquidificador {
+    height: 200px;
+    width: 200px;
+    margin: 0 0;
+    display: block;
+}
+
+p {
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+figcaption {
+    display: flex;
+    justify-content: left;
+    padding-top: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid white;
+    height: 2.5rem;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* altura do rodapé */
+  }
