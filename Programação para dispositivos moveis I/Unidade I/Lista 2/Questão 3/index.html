@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="considerations about server side and client side">
+    <meta name="author" content="Jose Vitor Lopes de Sousa Segundo">
+    <title> Lista 1 - Exercício 3</title>
+</head>
+<body>
+    <main>
+        <h1>Server Side e Client Side</h1>
+        <p>
+            A tradução dos termos significa respectivamente, lado do servidor e lado do cliente. Com o objetivo de descrever onde o 
+            código é executado.
+        </p>
+        
+        <h2>O que significa lado do cliente?</h2>
+        <p>
+            No desenvolvimento da web, "lado do cliente" refere-se a tudo em um aplicativo web que é exibido ou ocorre no 
+            cliente (dispositivo do usuário final). Isso inclui o que o usuário vê, como texto, imagens e o resto da IU, junto com 
+            quaisquer ações que um aplicativo execute no navegador do usuário.
+        </p>
+        <p>
+            Linguagens de marcação como HTML e CSS são interpretadas pelo navegador no lado do cliente. Além disso, muitos 
+            desenvolvedores contemporâneos estão incluindo processos do lado do cliente em sua arquitetura de aplicativos e 
+            deixando de fazer tudo no lado do servidor; a lógica de negócios para páginas web dinâmicas, por exemplo, 
+            geralmente é executada no lado do cliente em um aplicativo web moderno. Os processos do lado do cliente quase 
+            sempre são escritos em JavaScript.
+        </p>
+        <p>
+            Como exemplo, temos o site <a href="https://www.netflix.com/br/">netflix.com</a>, o HTML, CSS e JavaScript que ditam como a página principal da Netflix aparece 
+            para o usuário são interpretados pelo navegador no lado do cliente. A página também pode responder a "eventos": 
+            por exemplo, se o mouse do usuário passar sobre uma das imagens em miniatura do filme, a imagem se expande e as 
+            miniaturas adjacentes se movem ligeiramente para um lado para abrir espaço para a imagem maior. Este é um exemplo 
+            de processo do lado do cliente; o código dentro da própria página web responde ao mouse do usuário e inicia essa 
+            ação sem se comunicar com o servidor.
+        </p>
+        <p>
+            O lado do cliente também é conhecido como front-end, embora esses dois termos não signifiquem exatamente a mesma coisa. 
+            O lado do cliente se refere apenas ao local onde os processos são executados, enquanto o front-end se refere aos tipos 
+            de processos que são executados no lado do cliente.
+        </p>
+        <p>
+            Uma página da web dinâmica é aquela que não exibe o mesmo conteúdo para todos os usuários e muda com base na entrada 
+            do usuário. A página inicial do Facebook é uma página dinâmica; a página de login do Facebook é, em sua maior parte, 
+            estática.
+        </p>
+        
+        <h2>O que significa lado do servidor?</h2>
+        <p>
+            Muito parecido com o lado do cliente, o "lado do servidor" significa tudo o que acontece no servidor, em vez de no 
+            cliente. No passado, quase toda a lógica de negócios era executada no lado do servidor e isso incluía renderizar 
+            páginas da web dinâmicas, interagir com bancos de dados, autenticação de identidade e notificações push.
+        </p>
+        <p>
+            O problema de hospedar todos esses processos no lado do servidor é que cada solicitação envolvendo um deles tem 
+            que viajar desde o cliente até o servidor, todas as vezes. Isso apresenta uma grande quantidade de latência. Por 
+            esse motivo, os aplicativos contemporâneos executam mais códigos no lado do cliente; um caso de uso é renderizar 
+            páginas da web dinâmicas em tempo real, executando scripts no navegador que fazem alterações no conteúdo que o 
+            usuário vê.
+        </p>
+        <p>
+            Como com "front-end" e "lado do cliente", back-end também é um termo para os processos que ocorrem no servidor, 
+            embora back-end se refira apenas aos tipos de processos e lado do servidor se refira ao local onde os processos 
+            são executados.
+        </p>
+        <p>Fonte: <a href="https://www.cloudflare.com/pt-br/learning/serverless/glossary/client-side-vs-server-side/">https://www.cloudflare.com/pt-br/learning/serverless/glossary/client-side-vs-server-side/</a></p>
+    </main>
+</body>
+</html>

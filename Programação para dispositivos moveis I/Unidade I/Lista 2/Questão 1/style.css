@@ -1,0 +1,14 @@
+main {
+    padding: 10px;
+}
+
+img#imagem {
+    margin: 0 auto;
+    display: block;
+}
+
+figcaption {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
