@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="considerations about semantic and HTML">
     <meta name="author" content="Jose Vitor Lopes de Sousa Segundo">
+    <link rel="stylesheet" href="style.css">
     <title> Lista 1 - Exercício 4</title>
 </head>
 <body>
@@ -24,19 +25,57 @@
             O header é utilizado para representar o cabeçalho de um documento ou seção declarado no HTML. Nele podemos inserir 
             elementos de h1 a h6, até elementos para representar imagens, parágrafos ou mesmo listas de navegação.
         </p>
-
-        <h3>section</h3>
+        <div>
+            <p>Exemplo de uso de 
+                <em style="font-family: monospace; padding: 0.3em; background-color: #d9f5f9; color: #0f8593; border-radius: 4px; font-style: normal;">&lt;header&gt;</em>:
+            </p>
+            <pre style="white-space:pre;" >
+                <span ><span >&lt;</span>header</span><span >&gt;</span>
+                <span ><span > &lt;</span>h1</span><span >&gt;</span>Título da página<span ><span >&lt;/</span>h1</span><span >&gt;</span></span>
+                <span ><span > &lt;</span>h2</span><span >&gt;</span>Subtítulo da página<span ><span >&lt;/</span>h2</span><span >&gt;</span></span>
+                <span ><span >&lt;/</span>header</span><span >&gt;</span>
+            </pre>
+        </div>
+        
+       <h3>section</h3>
         <p>
             O elemento section representa uma seção dentro de um documento e geralmente contém um título, o qual é definido 
             por meio de um dos elementos entre h1 e h6. Podemos utilizar o section, por exemplo, para descrever as 
             seções/tópicos de um documento.
         </p>
-        
+        <div>
+            <p>Exemplo de uso de 
+                <em style="font-family: monospace; padding: 0.3em; background-color: #d9f5f9; color: #0f8593; border-radius: 4px; font-style: normal;">&lt;section&gt;</em>:
+            </p>
+            <pre style="white-space:pre;" >
+                <span ><span >&lt;</span>section</span><span >&gt;</span>
+                <span ><span > &lt;</span>h3</span><span >&gt;</span>Seção 1<span ><span >&lt;/</span>h3</span><span >&gt;</span></span>
+                
+                <span ><span > &lt;</span>p</span><span >&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...<span ><span >&lt;/</span>p</span><span >&gt;</span></span>
+                <span ><span >&lt;/</span>section</span><span >&gt;</span>
+            </pre>
+        </div>
+
         <h3>nav</h3>
         <p>
             O elemento nav é utilizado quando precisamos representar um agrupamento de links de navegação, que, por sua vez, 
             são criados com os elementos ul, li e a.
         </p>
+        <div>
+            <p>Exemplo de uso de 
+                <em style="font-family: monospace; padding: 0.3em; background-color: #d9f5f9; color: #0f8593; border-radius: 4px; font-style: normal;">&lt;nav&gt;</em>:
+            </p>
+            <pre style="white-space:pre;" >
+                <span ><span >&lt;</span>nav</span><span >&gt;</span>
+                <span ><span > &lt;</span>ul</span><span >&gt;</span>
+                <span ><span >  &lt;</span>li</span><span >&gt;</span><span ><span >&lt;</span>a href="#"</span><span >&gt;</span>pagina 1<span ><span ><span >&lt;</span>/a</span><span >&gt;</span><span >&lt;/</span>li</span><span >&gt;</span></span>
+                <span ><span >  &lt;</span>li</span><span >&gt;</span><span ><span >&lt;</span>a href="#"</span><span >&gt;</span>pagina 2<span ><span ><span >&lt;</span>/a</span><span >&gt;</span><span >&lt;/</span>li</span><span >&gt;</span></span>
+                <span ><span >  &lt;</span>li</span><span >&gt;</span><span ><span >&lt;</span>a href="#"</span><span >&gt;</span>pagina 3<span ><span ><span >&lt;</span>/a</span><span >&gt;</span><span >&lt;/</span>li</span><span >&gt;</span></span>
+                <span ><span >  &lt;</span>li</span><span >&gt;</span><span ><span >&lt;</span>a href="#"</span><span >&gt;</span>pagina 4<span ><span ><span >&lt;</span>/a</span><span >&gt;</span><span >&lt;/</span>li</span><span >&gt;</span></span>
+                <span ><span > &lt;/</span>ul</span><span >&gt;</span>
+                <span ><span >&lt;/</span>nav</span><span >&gt;</span>
+            </pre>
+        </div>
         
         <h3>main</h3>
         <p>
@@ -55,5 +94,9 @@
             https://www.devmedia.com.br/html-semantico-conheca-os-elementos-semanticos-da-html5/38065</a>
         </p>
     </main>
+
+    <footer>
+        <p id="texto-footer">Esse site foi criado para fins de estudo <span>&#128187;</span></p>
+    </footer>
 </body>
 </html>
