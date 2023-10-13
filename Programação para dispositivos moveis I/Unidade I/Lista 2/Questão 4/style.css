@@ -3,29 +3,10 @@ main {
     margin-bottom: 20px;
 }
 
-img#imagem-client-server {
-    height: 300px;
-    width: 500px;
-    margin: 0 auto;
-    display: block;
-}
-
 p {
     text-align: justify;
     margin-left: 10px;
     margin-right: 10px;
-}
-
-img#imagem-criadores {
-    height: 200px;
-    margin: 0 auto;
-    display: block;
-}
-
-figcaption {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
 }
 
 footer {
